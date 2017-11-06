@@ -5,6 +5,17 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'app';
+
+    parentGreeting: string;
+
+    constructor () {
+      this.parentGreeting = 'Bonjour';
+    }
+
+    receiveSignal (name) {
+      this.parentGreeting = name;
+    }
+
 }
